@@ -15,7 +15,7 @@ upper = np.array([90, 255, 255], dtype=np.uint8)
 mask = cv2.inRange(hsv, lower, upper)  
 
 out_bgr = np.zeros_like(img_bgr)
-out_bgr[mask > 0] = (0, 255, 0)
+out_bgr[mask > 0] = (0, 255, 0) #BGR
 
 # Plot (convert BGR->RGB for matplotlib)
 out_rgb = cv2.cvtColor(out_bgr, cv2.COLOR_BGR2RGB)
